@@ -10,18 +10,15 @@ MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
 	ui(new Ui::MainWindow),freeSpace(1)
 {
-	init();
+	//init();
 	qRegisterMetaType<MyPair>("MyPair");
 
-	QString root = QCoreApplication::applicationDirPath();
+	root = QCoreApplication::applicationDirPath();
 
 	this->setAutoFillBackground(false);
 	QPalette palette = this->palette();
 	palette.setBrush(QPalette::Window,
-		QBrush(QPixmap(root + "/static/background.png").scaled(// 缩放背景图.
-			this->size(),
-			Qt::IgnoreAspectRatio,
-			Qt::SmoothTransformation)));             // 使用平滑的缩放方式
+		QBrush(QPixmap(root + "/static/background.png")));
 	this->setPalette(palette);
 
 	ui->setupUi(this);
@@ -34,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	//m_mainLayout->addLayout(m_toplayout);
 
 	setLayout(m_mainLayout);
-	setFixedSize(700, 500);
+	setFixedSize(900, 600);
 	setWindowFlags(Qt::FramelessWindowHint);
 
 	connect(m_titleWidget, SIGNAL(customShowMinWindow()), this, SLOT(showMinimized()));
@@ -55,12 +52,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
 	initTableView();
 }
+
 void MainWindow::asyOcr(const std::string imgPath, const int index)
 {
 	freeSpace.acquire();
 	string name, num;
-	ocr(imgPath, name, num);
-	emit Result({ {name,num},index });
+	//ocr(imgPath, name, num);
+	//emit Result({ {name,num},index });
 	freeSpace.release();
 }
 
@@ -80,7 +78,6 @@ void MainWindow::on_fileButton_clicked()
 	else {
 		qDebug("You select %s", path);
 	}
-	int count = 0;
 
 	QStringList files = getFileNames(path);
 	for (QString str : files) {
@@ -130,8 +127,8 @@ void MainWindow::initTableView()
 	QFont f = ui->tableView->font();
 	f.setBold(true);
 	ui->tableView->horizontalHeader()->setFont(f);
-	ui->tableView->setColumnWidth(0, 210);
-	ui->tableView->setColumnWidth(1, 210);
+	ui->tableView->setColumnWidth(0, 300);
+	ui->tableView->setColumnWidth(1, 290);
 	ui->tableView->horizontalHeader()->setHighlightSections(false);
 	ui->tableView->setFrameShape(QFrame::NoFrame);
 	//ui->tableView->setItemDelegate(new NoFocusFrameDelegate());
@@ -155,21 +152,73 @@ void MainWindow::setTableView(const pair<std::string, std::string>& data, const 
 
 void MainWindow::updateTableView(const MyPair& p)
 {
-	setTableView(p.first,p.second);
+	QCoreApplication::processEvents();//避免界面冻结 
+	dialog->setValue(count);//设置进度条的当前值
+	pair<string, string> pair;
+	pair.first = "迅销商贸有限公司";
+	pair.second = "91310000717867461E";
+	setTableView(pair, count++);
 }
+
 void MainWindow::on_checkButton_clicked()
 {
-	
 	model->removeRows(0, model->rowCount());
-	int count = 0;
-	
-	for (int i = 0; i<20; ++i)
+	count = 0;
+
+	if (pathList.size() <= 0) 
+	{
+		QMessageBox message(QMessageBox::NoIcon, "", QString::fromLocal8Bit("没有选择任何图片文件（格式仅支持*.jpg、*.jpeg、*.png）！"));
+		message.setButtonText(1, QString::fromLocal8Bit("确认"));
+		message.setWindowIcon(QIcon(root + "/static/logo"));
+		QPalette palette = message.palette();
+		palette.setBrush(QPalette::Window,
+			QBrush(QPixmap(root + "/static/dialogbg.png")));
+		message.setPalette(palette);
+		message.exec();
+		return;
+	}
+
+	dialog = new QProgressDialog(this);
+	dialog->setRange(0, 10000);
+	//dialog->setLabelText(QString::fromLocal8Bit("识别进度"));
+	dialog->setCancelButtonText(QString::fromLocal8Bit("取消"));
+	//dialog->setGeometry((900-600)/2, (600-200)/2, 600, 160);
+	dialog->setWindowModality(Qt::WindowModal);//将对话框设置为模态的  
+	dialog->setFixedSize(600, 160);
+	dialog->setAutoClose(true);
+	QPushButton *cbtn = new QPushButton(this);
+	cbtn->setStyleSheet("QPushButton{min-width:80px;min-height:30px;color:white} ");
+	cbtn->setText(QString::fromLocal8Bit("取消"));
+	dialog->setCancelButton(cbtn);
+	QPalette palette = dialog->palette();
+	palette.setBrush(QPalette::Window,
+		QBrush(QPixmap(root + "/static/dialogbg.png")));
+	dialog->setPalette(palette);
+	dialog->show();
+
+	for (int i = 0; i<pathList.size(); ++i)
 	{
 		qDebug("%s",pathList[i]);
 		string name, num;
-		QtConcurrent::run(this, &MainWindow::asyOcr, pathList[i], count++);
-
+		//QtConcurrent::run(this, &MainWindow::asyOcr, pathList[i], count++);
+		if (dialog->wasCanceled())
+		{
+			delete dialog;
+			break;
+		}
 	}
+
+	/*演示复制进度
+	for (int i = 0; i <= 10000; i++) {
+		MyPair pair;
+		updateTableView(pair);
+		//QCoreApplication::processEvents();//避免界面冻结  
+		if (dialog->wasCanceled())
+		{
+			delete dialog;
+			break;
+		}
+	}*/
 }
 
 void MainWindow::on_excelButton_clicked()
@@ -186,10 +235,10 @@ void MainWindow::on_excelButton_clicked()
 	}
 	create_result_excel();
 
-	vector<string> data;
-	data.push_back("迅销商贸有限公司");
-	data.push_back("91310000717867461E");
-	open_excel_and_add_result(data);
+	pair<string, string> tp;
+	tp.first = "迅销商贸有限公司";
+	tp.second = "91310000717867461E";
+	open_excel_and_add_result(tp);
 	copy_and_save_file(fileName.toStdWString());
 }
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
-    <height>500</height>
+    <width>900</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="font">
@@ -23,10 +23,10 @@
    <widget class="QPushButton" name="fileButton">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>210</y>
+      <x>700</x>
+      <y>220</y>
       <width>151</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -41,10 +41,10 @@
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>461</width>
-      <height>341</height>
+      <x>50</x>
+      <y>150</y>
+      <width>601</width>
+      <height>421</height>
      </rect>
     </property>
     <property name="baseSize">
@@ -62,10 +62,10 @@
    <widget class="QPushButton" name="checkButton">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>280</y>
+      <x>700</x>
+      <y>340</y>
       <width>151</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -80,10 +80,10 @@
    <widget class="QPushButton" name="excelButton">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>350</y>
+      <x>700</x>
+      <y>460</y>
       <width>151</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">

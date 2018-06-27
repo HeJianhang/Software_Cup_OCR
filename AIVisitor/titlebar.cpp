@@ -28,7 +28,7 @@ TitleBar::TitleBar(QWidget *parent)
     m_layout->setSpacing(0);
     m_layout->setContentsMargins(15, 0, 5, 0);
     setLayout(m_layout);
-    setFixedSize(700, 30);
+    setFixedSize(900, 30);
 
     connect(m_closeBtn, SIGNAL(clicked()), this, SIGNAL(customCloseWindow()));
     connect(m_minBtn, SIGNAL(clicked()), this, SIGNAL(customShowMinWindow()));

@@ -25,14 +25,19 @@
 #include <QtConcurrent>
 #include <QThread>
 #include <QSemaphore>
-
+#include<QProgressDialog>
 #include <qdebug.h>
 #include "titlebar.h"
-#include <OCRDll.h>
+#include "processwindow.h"
+//#include <OCRDll.h>
+#include <iostream>
+
+using namespace std;
 namespace Ui {
 
 class MainWindow;
 }
+
 typedef pair<std::pair<std::string, std::string>, int> MyPair;
 class MainWindow : public QMainWindow
 {
@@ -57,8 +62,12 @@ private slots:
 
 	void updateTableView(const MyPair&);
 private:
+	int count;
+	QProgressDialog *dialog;
+	QString root;
 	QSemaphore freeSpace;
     Ui::MainWindow *ui;
+	ProcessWindow *process_window;
     QPoint last;
 	QStandardItemModel *model;
     std::vector<std::string> pathList;

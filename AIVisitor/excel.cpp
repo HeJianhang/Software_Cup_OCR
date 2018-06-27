@@ -77,11 +77,11 @@ bool copy_and_save_file(const std::wstring &dst) {
 * 将结果保存在result.xlsx
 * 前提: resutlt.xlsx存在
 */
-void open_excel_and_add_result(const std::vector<std::string> rst) {
+void open_excel_and_add_result(const std::pair<std::string, std::string> rst) {
 	// 转换为utf8的中文字符串
 	std::vector<std::string> vct_utf8;
-	vct_utf8.push_back(convert_wstring_to_utf8_string(covert_string_to_wstring(rst[0])));
-	vct_utf8.push_back(convert_wstring_to_utf8_string(covert_string_to_wstring(rst[1])));
+	vct_utf8.push_back(convert_wstring_to_utf8_string(covert_string_to_wstring(rst.first)));
+	vct_utf8.push_back(convert_wstring_to_utf8_string(covert_string_to_wstring(rst.second)));
 
 	// 追加到result.xlsx中
 	xlnt::workbook wb;

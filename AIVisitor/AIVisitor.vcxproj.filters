@@ -71,6 +71,15 @@
     <ClCompile Include="release\moc_mainwindow.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="processwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_processwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_processwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="custompushbutton.h">
@@ -80,6 +89,9 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="titlebar.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="processwindow.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
