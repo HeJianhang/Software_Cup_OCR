@@ -93,12 +93,13 @@ void MainWindow::on_fileButton_clicked()
 		qDebug("You select %s", path);
 		pathList.clear(); // 清空之前的路径
 	}
-
+	QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 	QStringList files = getFileNames(path);
 	for (QString str : files) {
 		qDebug() << str;
 		pathList.push_back(string(str.toLocal8Bit()));
 	}
+	QApplication::restoreOverrideCursor();
 
 }
 
@@ -306,8 +307,10 @@ void MainWindow::cancelOcr()
 void MainWindow::doneOne()
 {
 	dialog->setValue(dialog->value() + 1);
-	qDebug() << dialog->value();
-	qDebug()<<dialog->maximum();
+	if (dialog->isHidden())
+	{
+		showMessageBox("识别完成！");
+	}
 }
 
 void MainWindow::showMessageBox(string content)
