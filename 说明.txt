@@ -1,0 +1,13 @@
+3rdparty目录：包括项目所需第三方头文件以及库文件
+AIVisitor目录：Qt界面项目，生成最终exe文件
+ClassifyDll：文字识别dll项目，用于文字识别
+OCRDll：Ocr的dll项目，封装图片预处理，检测和识别
+
+开发说明：
+tensorflow1.4，cuda8.0，其他版本未测试。
+yolo v3
+Visual Studio 2015/2017
+Qt5.6（若使用其他版本，需要把对应文件dll和文件考到AIVisitor/release和AIVisitor/platform目录下
+
+必须环境
+cuda8.0，其他版本未测试
