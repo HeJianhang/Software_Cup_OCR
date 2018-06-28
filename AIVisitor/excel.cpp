@@ -55,7 +55,6 @@ void create_result_excel(const std::wstring& filename_wstr, const QStandardItemM
 		std::string wsName = convert_wstring_to_utf8_string(name.toStdWString());
 		std::string wsNum = convert_wstring_to_utf8_string(num.toStdWString());
 
-		qDebug() << ws.highest_row();
 		ws.cell(xlnt::cell_reference(1, i + 2)).value(wsName.c_str());
 		ws.cell(xlnt::cell_reference(2, i + 2)).number_format(xlnt::number_format::text());
 		ws.cell(xlnt::cell_reference(2, i + 2)).value(wsNum.c_str());

@@ -195,6 +195,8 @@ void MainWindow::on_checkButton_clicked()
 		startRunnable->reset();
 		QApplication::restoreOverrideCursor();
 	}
+	else
+		startRunnable->reset();
 	dialog->reset();
 	dialog->setValue(0);
 	dialog->setRange(0, pathList.size());
@@ -298,7 +300,6 @@ void MainWindow::cancelOcr()
 	{
 		QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 		startRunnable->clear();
-		startRunnable->reset();
 		QApplication::restoreOverrideCursor();
 	}
 	dialog->hide();
@@ -306,10 +307,13 @@ void MainWindow::cancelOcr()
 
 void MainWindow::doneOne()
 {
-	dialog->setValue(dialog->value() + 1);
-	if (dialog->isHidden())
+	if (!startRunnable->isToStop)
 	{
-		showMessageBox("识别完成！");
+		dialog->setValue(dialog->value() + 1);
+		if (dialog->isHidden())
+		{
+			showMessageBox("识别完成！");
+		}
 	}
 }
 

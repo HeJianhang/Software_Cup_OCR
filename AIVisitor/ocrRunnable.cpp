@@ -1,18 +1,18 @@
 #include "ocrRunnable.h"
-QSemaphore OCRRunnable::freeSpace(1);
+
 QSemaphore OCRRunnable::numLimitSingal(THREAD_COUNT);
 int OCRRunnable::listCount = 0;
 void OCRRunnable::run()
 {
 	isRunning = true;
-	freeSpace.acquire();
-	if (isToStop)
-	{
-		freeSpace.release();
-		isRunning = false;
-		numLimitSingal.release();
-		return;
-	}
+	//freeSpace.acquire();
+	//if (isToStop)
+	//{
+	//	freeSpace.release();
+	//	isRunning = false;
+	//	numLimitSingal.release();
+	//	return;
+	//}
 	string name, num;
 	ocr(imgPath, name, num);
 	QString str = QString::fromStdString(name);
@@ -23,7 +23,7 @@ void OCRRunnable::run()
 		emit Result({ {name,num},listCount++ });
 	}
 	emit DoneOne();
-	freeSpace.release();
+	//freeSpace.release();
 	isRunning = false;
 	numLimitSingal.release();
 }
@@ -84,6 +84,7 @@ bool StartRunnable::clear()
 	if (isRunning)
 	{
 		isToStop = true;
+		setIsStop(true);
 		QThreadPool::globalInstance()->cancel(this);
 		for (int i = 0; i < THREAD_COUNT; ++i)
 		{
@@ -98,6 +99,7 @@ bool StartRunnable::clear()
 void StartRunnable::reset()
 {
 	isToStop = false;
+	setIsStop(false);
 	for (int i = 0; i < THREAD_COUNT; ++i)
 	{
 		threadList[i]->isToStop = false;

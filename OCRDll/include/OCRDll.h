@@ -14,7 +14,7 @@
 #include <yolo_v2_class.hpp>
 #include <string>
 #include <classifier.h>
-
+#include <windows.h>
 using namespace cv;
 using namespace cv::ml;
 using namespace std;
@@ -23,3 +23,4 @@ __declspec(dllexport) std::string& trim(std::string &s);
 __declspec(dllexport) void init(string path1,string path2,string path3,string path4);
 __declspec(dllexport) void destroy();
 __declspec(dllexport) void ocr(const string imgPath, string& name, string& num);
+__declspec(dllexport) void setIsStop(bool);

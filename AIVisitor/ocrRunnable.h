@@ -51,7 +51,6 @@ public:
 	void run();
 	bool isRunning;
 	bool isToStop;
-	static QSemaphore freeSpace;
 	static QSemaphore numLimitSingal;
 	void setPathList(vector<string>*);
 	void setThreadList(OCRRunnable**);

@@ -1,4 +1,4 @@
-#pragma once#include <QDebug>
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <xlnt/xlnt.hpp>
