@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>.\include;..\3rdparty\include\Eigen\src;..\3rdparty\include\external\eigen_archive;..\3rdparty\include\;..\3rdparty\include\third_party\eigen3;..\3rdparty\include\google\protobuf;..\3rdparty\include\tensorflow;..\3rdparty\include\opencv3.4.0\include;..\3rdparty\include\opencv3.4.0\include\opencv;..\3rdparty\include\opencv3.4.0\include\opencv2;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Code\C++\ClassifyDll\extra\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\3rdparty\lib;$(LibraryPath)</LibraryPath>
     <OutDir>release</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
