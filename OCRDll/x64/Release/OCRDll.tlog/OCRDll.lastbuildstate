@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
-Release|x64|D:\Code\C++\AIOCR\AIVisitor\|
+<<<<<<< HEAD
+Release|x64|D:\Code\C++\Software_Cup_OCR\|
+=======
+Release|x64|E:\IDEApro\Software_Cup_OCR\|
+>>>>>>> 4ea693a88dc492cef16d42c409d0efe6be6dd7c1
