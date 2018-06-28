@@ -1,7 +1,4 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  dllmain.cpp
-d:\code\c++\software_cup_ocr\software_cup_ocr\ocrdll\stdafx.h(10): warning C4005: “WIN32_LEAN_AND_MEAN”: 宏重定义
-  d:\code\c++\software_cup_ocr\software_cup_ocr\ocrdll\stdafx.h(10): note: 命令行参数: 参见前面的“WIN32_LEAN_AND_MEAN”定义
   OCRDll.cpp
 D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\3rdparty\include\darknet\include\yolo_v2_class.hpp(48): warning C4305: “初始化”: 从“double”到“float”截断
 D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\3rdparty\include\darknet\include\yolo_v2_class.hpp(70): warning C4244: “*=”: 从“float”转换到“unsigned int”，可能丢失数据
@@ -54,17 +51,17 @@ OCRDll.cpp(368): warning C4244: “=”: 从“double”转换到“int”，可
 OCRDll.cpp(369): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 OCRDll.cpp(370): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 OCRDll.cpp(634): warning C4018: “<”: 有符号/无符号不匹配
-OCRDll.cpp(785): warning C4018: “>”: 有符号/无符号不匹配
-OCRDll.cpp(787): warning C4244: “=”: 从“double”转换到“unsigned int”，可能丢失数据
-OCRDll.cpp(929): warning C4244: “=”: 从“double”转换到“unsigned int”，可能丢失数据
-OCRDll.cpp(1049): warning C4018: “<”: 有符号/无符号不匹配
-OCRDll.cpp(1087): warning C4018: “>”: 有符号/无符号不匹配
-OCRDll.cpp(1089): warning C4244: “=”: 从“double”转换到“unsigned int”，可能丢失数据
-OCRDll.cpp(1161): warning C4018: “<”: 有符号/无符号不匹配
+OCRDll.cpp(784): warning C4018: “>”: 有符号/无符号不匹配
+OCRDll.cpp(786): warning C4244: “=”: 从“double”转换到“unsigned int”，可能丢失数据
+OCRDll.cpp(928): warning C4244: “=”: 从“double”转换到“unsigned int”，可能丢失数据
+OCRDll.cpp(1050): warning C4018: “<”: 有符号/无符号不匹配
+OCRDll.cpp(1088): warning C4018: “>”: 有符号/无符号不匹配
+OCRDll.cpp(1090): warning C4244: “=”: 从“double”转换到“unsigned int”，可能丢失数据
 OCRDll.cpp(1162): warning C4018: “<”: 有符号/无符号不匹配
-OCRDll.cpp(1164): warning C4018: “<”: 有符号/无符号不匹配
-OCRDll.cpp(1305): warning C4305: “=”: 从“double”到“float”截断
-OCRDll.cpp(1364): warning C4305: “参数”: 从“double”到“float”截断
+OCRDll.cpp(1163): warning C4018: “<”: 有符号/无符号不匹配
+OCRDll.cpp(1165): warning C4018: “<”: 有符号/无符号不匹配
+OCRDll.cpp(1306): warning C4305: “=”: 从“double”到“float”截断
+OCRDll.cpp(1365): warning C4305: “参数”: 从“double”到“float”截断
 D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(291): warning C4800: “google::protobuf::Map<std::string,tensorflow::AttrValue>::std::size_type”: 将值强制为布尔值“true”或“false”(性能警告)
   D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(289): note: 编译类 模板 成员函数“bool google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::DeleteMapValue(const google::protobuf::MapKey &)”时
   D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/attr_value.pb.h(647): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>”的引用
@@ -166,9 +163,9 @@ D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\3rdparty\include\google/protobuf/m
           ]
     正在创建库 release\OCRDll.lib 和对象 release\OCRDll.exp
   正在生成代码
-  1124 of 1125 functions (99.9%) were compiled, the rest were copied from previous compilation.
-    21 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  21 of 1125 functions ( 1.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    16 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   OCRDll.vcxproj -> D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\OCRDll\release\OCRDll.dll
   OCRDll.vcxproj -> release\OCRDll.pdb (Full PDB)
