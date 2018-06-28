@@ -1,0 +1,30 @@
+release：应用文件所在目录，包括必须的dll
+
+文件介绍：
+	1、main.cpp：程序入口
+
+	2、mainwindow.cpp，mainwindow.h：主窗口类MainWindow
+		主要函数：
+			initTableView：初始化列表
+			setTableView：更新列表
+			cancelOcr：取消正在执行的ocr过程。
+			on_checkButton_clicked：开始ocr
+			on_fileButton_clicked：设置ocr目录
+			on_excelButton_clicked：生成excel
+	3、excel.cpp，excel.h：excel操作函数
+		主要函数介绍：
+			void create_result_excel(const std::wstring&,const QStandardItemModel*)：把结果写入excel
+
+	4、ocrRunnable.cpp，ocrRunnable.h：ocr线程类，用于多线程执行ocr过程，避免前台卡死。其中抱括OCRRunnable类和StartRunnable类
+		OCRRunnable类：ocr处理的主要类，执行ocr操作
+			主要函数：
+				run（）:线程操作的过程
+		StartRunnable类：控制ocr过程的开始，停止，控制线程池来开始多个OCRRunnable线程。
+			主要函数：
+				run（）:线程操作的过程
+				void setPathList(vector<string>*)：设置图片路径
+				void setThreadList(OCRRunnable**)：设置要OCRRunnable类
+				bool clear()：停止所有OCRRunnable线程，并等待结束
+				void reset()：重置，用于clear后重新开始。
+			
+	5、titlebar.cpp，titlebar.h，custompushbutton.cpp，custompushbutton.h：自定义控件

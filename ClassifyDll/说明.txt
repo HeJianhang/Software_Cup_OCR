@@ -1,0 +1,16 @@
+include：dll必须的头文件
+release：生成目录
+
+相关类和函数：
+    1、Word结构体：封装文字和准确率
+
+    2、Classifier类：用于文字识别，封装c++，tensorflow.dll相关操作。
+	私有函数：
+	    readLabel：读取标签
+	    LoadGraph：读取tensorflow模型图
+	    createGraph：创建tensorflow模型
+	    createInputsTensor：把输入转换成tensor
+	    predict：识别文字
+	公有函数：
+	    Classifier(std::string graphPath, std::string labelPath)：构造函数，输入模型图路径和标签路径
+	    classify(cv::Mat &img, std::vector<Word> &words, int topK = 3)：识别文字，输入图片Mat，返回topK结果

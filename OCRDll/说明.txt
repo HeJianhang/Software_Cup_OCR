@@ -1,0 +1,30 @@
+include：头文件
+release：生成dll的目录
+
+相关函数：
+	主要函数（外部接口）：
+	void ocr(const string imgPath, string& name, string& num)：dll输出函数，输入图片路径，返回企业名称和注册号
+	void begin(const string imgPath, string& CompanyName, string& CompanyNum)：主要的处理过程，输入图片路径，返回企业名称和注册号
+	void init(string path1, string path2, string path3, string path4)：初始化tensorflow和yolo，path1：标签路径，path2:cnn模型路径，path3：yolo配置文件路径，path4：yolo权重路径
+	void destroy()：释放资源
+	
+	其他函数：
+	sortBox：文本区域行排序
+	bin_linear_scale：等比例缩放
+	getConnectedDomain：获取连图区域
+	USMSharp：usm锐化
+	removeMark：移除红色印章
+	fixTransparent：4通道转3通道
+	usm：主要预处理函数，封装4通道转3通道，移除红色印章，usm锐化，去水印。
+	removePepperNoise：去除噪点
+	cut：获取文本行。
+	boxResize：文本框等比例缩放
+	fixSmall：使用yolo前的预处理，扩充较短的文本行，避免图片缩放时文字变形过大
+	horizonMat：水平投影，用于调整文字位置，提高识别率
+	fixWord：识别前的预处理，用于文字缩放。
+	findWidth：获取yolo检测后汉字和数字的最适宽度。
+	verticalMat：垂直投影，用于切割文字
+	selectBoxes：利用动态滑窗，根据yolo检测的文字框和垂直投影的文字框的位置，选择使用yolo框还是投影框。若使用投影框，则利用findWidth得出的最适宽度进行再切割。
+	convertYoloBox：转换yolo的处的文本框位置和大小，避免越界。
+	abstractMessage：提取企业名称和注册号
+	isSameRow：判断是否是同一行
