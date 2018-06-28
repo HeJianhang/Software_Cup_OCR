@@ -36,7 +36,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(700, 500);
+        MainWindow->resize(900, 600);
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font.setPointSize(10);
@@ -45,24 +45,24 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         fileButton = new QPushButton(centralWidget);
         fileButton->setObjectName(QStringLiteral("fileButton"));
-        fileButton->setGeometry(QRect(520, 210, 151, 31));
+        fileButton->setGeometry(QRect(700, 220, 151, 41));
         QFont font1;
         font1.setPointSize(12);
         fileButton->setFont(font1);
         tableView = new QTableView(centralWidget);
         tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(20, 120, 461, 341));
+        tableView->setGeometry(QRect(20, 140, 661, 431));
         tableView->setBaseSize(QSize(0, 0));
         QFont font2;
         font2.setPointSize(10);
         tableView->setFont(font2);
         checkButton = new QPushButton(centralWidget);
         checkButton->setObjectName(QStringLiteral("checkButton"));
-        checkButton->setGeometry(QRect(520, 280, 151, 31));
+        checkButton->setGeometry(QRect(700, 340, 151, 41));
         checkButton->setFont(font1);
         excelButton = new QPushButton(centralWidget);
         excelButton->setObjectName(QStringLiteral("excelButton"));
-        excelButton->setGeometry(QRect(520, 350, 151, 31));
+        excelButton->setGeometry(QRect(700, 460, 151, 41));
         excelButton->setFont(font1);
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);

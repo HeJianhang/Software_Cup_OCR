@@ -4,10 +4,28 @@ QPushButton{
     background-color: #cfb62d;  
 } 
 QLabel{  
-    color:blue;  
-}  
+    font-family:"Microsoft YaHei";
+    font-size:20px;
+    color:white;  
+}
 QTableView{
     selection-background-color: #d4bd3e;
+}
+QProgressBar{
+    border:3px solid #FFFFFF;
+    height:30;
+    background:black;
+    text-align:center;
+    color:white;
+    border-radius:10px;
+}
+QProgressBar::chunk{
+    border-radius:3px;
+    border:0.5px;
+    solid #a91e25;
+    background:#a91e25;
+    width: 10px;
+    margin: 0.5px;
 }
 QLineEdit{  
     text-align: center;  

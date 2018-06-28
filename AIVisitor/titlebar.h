@@ -1,5 +1,4 @@
 #ifndef TITLEBAR_H
-#define TITLEBAR_H
 
 #include <QWidget>
 #include <QPixmap>
@@ -9,6 +8,8 @@
 #include <QHBoxLayout>
 
 #include "custompushbutton.h"
+
+#define TITLEBAR_H
 
 class TitleBar : public QWidget
 {

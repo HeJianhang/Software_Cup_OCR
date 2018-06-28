@@ -1,10 +1,9 @@
 #ifndef CUSTOMPUSHBUTTON_H
-#define CUSTOMPUSHBUTTON_H
 
 #include <QPushButton>
 #include <QPainter>
 #include <QPaintEvent>
-
+#define CUSTOMPUSHBUTTON_H
 class CustomPushButton : public QPushButton
 {
 	Q_OBJECT

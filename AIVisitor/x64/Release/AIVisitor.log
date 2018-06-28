@@ -1,4 +1,4 @@
-﻿  moc_mainwindow.cpp
+﻿  mainwindow.cpp
 ..\3rdparty\include\darknet\include\yolo_v2_class.hpp(48): warning C4305: “初始化”: 从“double”到“float”截断
 ..\3rdparty\include\darknet\include\yolo_v2_class.hpp(529): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 ..\3rdparty\include\darknet\include\yolo_v2_class.hpp(552): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
@@ -11,8 +11,8 @@
 ..\3rdparty\include\tensorflow/core/framework/allocator.h(94): warning C4100: “allocation_attr”: 未引用的形参
 ..\3rdparty\include\tensorflow/core/framework/allocator.h(159): warning C4100: “ptr”: 未引用的形参
 ..\3rdparty\include\tensorflow/core/framework/allocator.h(183): warning C4100: “ptr”: 未引用的形参
-d:\code\c++\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported\eigen\cxx11\src/Tensor/Tensor.h(76): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
-  d:\code\c++\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported\eigen\cxx11\src/Tensor/TensorMap.h(31): note: 参见对正在编译的类 模板 实例化“Eigen::Tensor<T,1,1,int>”的引用
+d:\code\c++\software_cup_ocr\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported\eigen\cxx11\src/Tensor/Tensor.h(76): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+  d:\code\c++\software_cup_ocr\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported\eigen\cxx11\src/Tensor/TensorMap.h(31): note: 参见对正在编译的类 模板 实例化“Eigen::Tensor<T,1,1,int>”的引用
           with
           [
               T=float
@@ -57,6 +57,7 @@ d:\code\c++\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported
 ..\3rdparty\include\tensorflow/core/public/session.h(134): warning C4100: “run_options”: 未引用的形参
 ..\3rdparty\include\tensorflow/core/public/session.h(139): warning C4100: “run_options”: 未引用的形参
 ..\3rdparty\include\tensorflow/core/public/session.h(194): warning C4100: “output”: 未引用的形参
+mainwindow.cpp(199): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 ..\3rdparty\include\google/protobuf/map_field_inl.h(217): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
   ..\3rdparty\include\google/protobuf/map_field_inl.h(215): note: 编译类 模板 成员函数“int google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const”时
   ..\3rdparty\include\tensorflow/core/framework/attr_value.pb.h(1709): note: 参见对正在编译的函数 模板 实例化“int google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const”的引用
@@ -394,4 +395,4 @@ d:\code\c++\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported
               T=google::protobuf::int32
           ]
 ..\3rdparty\include\google/protobuf/arena.h(814): warning C4100: “ptr”: 未引用的形参
-  AIVisitor.vcxproj -> D:\Code\C++\Software_Cup_OCR\AIVisitor\release\AIVisitor.exe
+  AIVisitor.vcxproj -> D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\AIVisitor\release\AIVisitor.exe

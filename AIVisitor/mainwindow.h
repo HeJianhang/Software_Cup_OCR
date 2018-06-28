@@ -1,5 +1,4 @@
 #ifndef MAINWINDOW_H
-#define MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QtWidgets/QWidget>
@@ -22,32 +21,36 @@
 #include <string>
 #include <QDebug>
 #include <QMouseEvent>
-#include <QtConcurrent>
 #include <QThread>
 #include <QSemaphore>
-
+#include <qthreadpool.h>
+#include<QProgressDialog>
 #include <qdebug.h>
 #include "titlebar.h"
+#include "ocrRunnable.h"
 #include <OCRDll.h>
+
+#define MAINWINDOW_H
+
 namespace Ui {
 
 class MainWindow;
 }
-typedef pair<std::pair<std::string, std::string>, int> MyPair;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(string path1, string path2, string path3, string path4,QWidget *parent = 0);
     ~MainWindow();
-signals:
-	void Result(const MyPair&);
+
 protected:
     void mousePressEvent(QMouseEvent *e);
     void mouseMoveEvent(QMouseEvent *e);
     void mouseReleaseEvent(QMouseEvent *e);
-
+public Q_SLOTS:
+	bool close();
 private slots:
     void on_fileButton_clicked();
 
@@ -56,9 +59,16 @@ private slots:
     void on_excelButton_clicked();
 
 	void updateTableView(const MyPair&);
+
+	void doneOne();
+	void showMessageBox(string ccontent);
 private:
-	QSemaphore freeSpace;
+	StartRunnable* startRunnable;
+	OCRRunnable** threadList;
+	int count;
+	QString root;
     Ui::MainWindow *ui;
+	QProgressDialog *dialog;
     QPoint last;
 	QStandardItemModel *model;
     std::vector<std::string> pathList;
@@ -68,7 +78,8 @@ private:
     TitleBar* m_titleWidget;
 	void initTableView();
 	void setTableView(const pair<std::string,std::string>& data, const int index);
-	void asyOcr(const std::string, const int);
+	void initProcess();
+	void cancelOcr();
 };
 
 #endif // MAINWINDOW_H
