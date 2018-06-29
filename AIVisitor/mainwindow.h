@@ -42,7 +42,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(string path1, string path2, string path3, string path4,QWidget *parent = 0);
+    explicit MainWindow(QString path1, QString path2, QString path3, QString path4,QWidget *parent = 0);
     ~MainWindow();
 
 protected:

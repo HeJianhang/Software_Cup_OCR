@@ -6,11 +6,11 @@
 
 using namespace std;
 
-MainWindow::MainWindow(string path1, string path2, string path3, string path4,QWidget *parent) :
+MainWindow::MainWindow(QString labelPath, QString modelPath, QString yoloCfgPath, QString yoloWeightPath,QWidget *parent) :
 	QMainWindow(parent),
 	ui(new Ui::MainWindow)
 {
-	init(path1,path2,path3,path4);
+	init(string(labelPath.toLocal8Bit()), convert_wstring_to_utf8_string(modelPath.toStdWString()).c_str(), string(yoloCfgPath.toLocal8Bit()), string(yoloWeightPath.toLocal8Bit()));
 	
 	threadList = new OCRRunnable*[THREAD_COUNT];
 	startRunnable = new StartRunnable();
