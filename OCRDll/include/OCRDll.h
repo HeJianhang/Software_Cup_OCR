@@ -20,7 +20,7 @@ using namespace cv::ml;
 using namespace std;
 using namespace classifier;
 __declspec(dllexport) std::string& trim(std::string &s);
-__declspec(dllexport) void init(string path1,string path2,string path3,string path4);
+__declspec(dllexport) void init(const string& path1, const string& path2, const string& path3, const string& path4);
 __declspec(dllexport) void destroy();
 __declspec(dllexport) void ocr(const string imgPath, string& name, string& num);
 __declspec(dllexport) void setIsStop(bool);

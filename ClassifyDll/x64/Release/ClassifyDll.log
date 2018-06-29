@@ -1,10 +1,144 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  classifierr.cpp
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/message_lite.h(247): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/wire_format_lite_inl.h(865): warning C4267: “参数”: 从“size_t”转换到“google::protobuf::uint32”，可能丢失数据
+D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/allocator.h(354): warning C4800: “tensorflow::uint32”: 将值强制为布尔值“true”或“false”(性能警告)
+D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/allocator.h(356): warning C4800: “tensorflow::uint32”: 将值强制为布尔值“true”或“false”(性能警告)
+d:\代码\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported\eigen\cxx11\src/Tensor/Tensor.h(76): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+  d:\代码\software_cup_ocr\3rdparty\include\external\eigen_archive\unsupported\eigen\cxx11\src/Tensor/TensorMap.h(31): note: 参见对正在编译的类 模板 实例化“Eigen::Tensor<T,1,1,int>”的引用
+          with
+          [
+              T=float
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/tensor_types.h(93): note: 参见对正在编译的类 模板 实例化“Eigen::TensorMap<Eigen::Tensor<T,1,1,int>,16,Eigen::MakePointer>”的引用
+          with
+          [
+              T=float
+          ]
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(36): warning C4251: “classifier::Classifier::top_k_64”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(37): warning C4251: “classifier::Classifier::train_flag”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(38): warning C4251: “classifier::Classifier::image_batch”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(39): warning C4251: “classifier::Classifier::keep_prob”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(40): warning C4251: “classifier::Classifier::output”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(41): warning C4251: “classifier::Classifier::topK_index_output”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(42): warning C4251: “classifier::Classifier::topK_val_output”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(43): warning C4251: “classifier::Classifier::labels”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\软件\Microsoft Visual Studio\VC\include\xstring(2633): note: 参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+D:\代码\Software_Cup_OCR\ClassifyDll\include\classifier.h(45): warning C4251: “classifier::Classifier::graphdef”: class“tensorflow::GraphDef”需要有 dll 接口由 class“classifier::Classifier”的客户端使用
+  D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/graph.pb.h(47): note: 参见“tensorflow::GraphDef”的声明
+classifierr.cpp(135): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(291): warning C4800: “google::protobuf::Map<std::string,tensorflow::AttrValue>::std::size_type”: 将值强制为布尔值“true”或“false”(性能警告)
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(289): note: 编译类 模板 成员函数“bool google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::DeleteMapValue(const google::protobuf::MapKey &)”时
+  D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/attr_value.pb.h(647): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>”的引用
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(217): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(215): note: 编译类 模板 成员函数“int google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const”时
+  D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/attr_value.pb.h(1709): note: 参见对正在编译的函数 模板 实例化“int google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const”的引用
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_lite.h(152): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_lite.h(151): note: 编译类 模板 成员函数“int google::protobuf::internal::MapFieldLite<Key,T,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const”时
+          with
+          [
+              Key=std::string,
+              T=tensorflow::AttrValue
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field.h(220): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapFieldLite<Key,T,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>”的引用
+          with
+          [
+              Key=std::string,
+              T=tensorflow::AttrValue
+          ]
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(291): warning C4800: “google::protobuf::Map<std::string,std::string>::std::size_type”: 将值强制为布尔值“true”或“false”(性能警告)
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(289): note: 编译类 模板 成员函数“bool google::protobuf::internal::MapField<std::string,std::string,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_STRING,0>::DeleteMapValue(const google::protobuf::MapKey &)”时
+  D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/framework/function.pb.h(320): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapField<std::string,std::string,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_STRING,0>”的引用
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(291): warning C4800: “google::protobuf::Map<google::protobuf::int32,std::string>::std::size_type”: 将值强制为布尔值“true”或“false”(性能警告)
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(289): note: 编译类 模板 成员函数“bool google::protobuf::internal::MapField<google::protobuf::int32,std::string,google::protobuf::internal::WireFormatLite::TYPE_INT32,google::protobuf::internal::WireFormatLite::TYPE_STRING,0>::DeleteMapValue(const google::protobuf::MapKey &)”时
+  D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/protobuf/cluster.pb.h(161): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapField<google::protobuf::int32,std::string,google::protobuf::internal::WireFormatLite::TYPE_INT32,google::protobuf::internal::WireFormatLite::TYPE_STRING,0>”的引用
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(291): warning C4800: “google::protobuf::Map<std::string,google::protobuf::int32>::std::size_type”: 将值强制为布尔值“true”或“false”(性能警告)
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(289): note: 编译类 模板 成员函数“bool google::protobuf::internal::MapField<std::string,google::protobuf::int32,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_INT32,0>::DeleteMapValue(const google::protobuf::MapKey &)”时
+  D:\代码\Software_Cup_OCR\3rdparty\include\tensorflow/core/protobuf/config.pb.h(1108): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapField<std::string,google::protobuf::int32,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_INT32,0>”的引用
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(292): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(292): note: 编译类 模板 成员函数“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_STRING,Key>::ByteSize(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”时
+          with
+          [
+              Key=std::string
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_entry_lite.h(206): note: 参见对正在编译的函数 模板 实例化“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_STRING,Key>::ByteSize(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”的引用
+          with
+          [
+              Key=std::string
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_entry.h(285): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapEntryLite<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>”的引用
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(416): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapEntry<Key,T,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>”的引用
+          with
+          [
+              Key=std::string,
+              T=tensorflow::AttrValue
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(394): note: 编译类 模板 成员函数“void google::protobuf::internal::MapField<std::string,tensorflow::AttrValue,google::protobuf::internal::WireFormatLite::TYPE_STRING,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::SyncRepeatedFieldWithMapNoLock(void) const”时
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(336): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(336): note: 编译类 模板 成员函数“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_STRING,Key>::GetCachedSize(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”时
+          with
+          [
+              Key=std::string
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_entry_lite.h(230): note: 参见对正在编译的函数 模板 实例化“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_STRING,Key>::GetCachedSize(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”的引用
+          with
+          [
+              Key=std::string
+          ]
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(325): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(324): note: 编译类 模板 成员函数“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,T>::GetCachedSize(const tensorflow::AttrValue &)”时
+          with
+          [
+              T=tensorflow::AttrValue
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_entry_lite.h(233): note: 参见对正在编译的函数 模板 实例化“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,T>::GetCachedSize(const tensorflow::AttrValue &)”的引用
+          with
+          [
+              T=tensorflow::AttrValue
+          ]
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(296): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(296): note: 编译类 模板 成员函数“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_INT32,Key>::ByteSize(const int &)”时
+          with
+          [
+              Key=google::protobuf::int32
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_entry_lite.h(207): note: 参见对正在编译的函数 模板 实例化“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_INT32,Key>::ByteSize(const int &)”的引用
+          with
+          [
+              Key=google::protobuf::int32
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_entry.h(285): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapEntryLite<google::protobuf::int32,std::string,google::protobuf::internal::WireFormatLite::TYPE_INT32,google::protobuf::internal::WireFormatLite::TYPE_STRING,0>”的引用
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(416): note: 参见对正在编译的类 模板 实例化“google::protobuf::internal::MapEntry<Key,T,google::protobuf::internal::WireFormatLite::TYPE_INT32,google::protobuf::internal::WireFormatLite::TYPE_STRING,0>”的引用
+          with
+          [
+              Key=google::protobuf::int32,
+              T=std::string
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_field_inl.h(394): note: 编译类 模板 成员函数“void google::protobuf::internal::MapField<google::protobuf::int32,std::string,google::protobuf::internal::WireFormatLite::TYPE_INT32,google::protobuf::internal::WireFormatLite::TYPE_STRING,0>::SyncRepeatedFieldWithMapNoLock(void) const”时
+D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(340): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_type_handler.h(340): note: 编译类 模板 成员函数“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_INT32,Key>::GetCachedSize(const int &)”时
+          with
+          [
+              Key=google::protobuf::int32
+          ]
+  D:\代码\Software_Cup_OCR\3rdparty\include\google/protobuf/map_entry_lite.h(233): note: 参见对正在编译的函数 模板 实例化“int google::protobuf::internal::MapTypeHandler<google::protobuf::internal::WireFormatLite::TYPE_INT32,Key>::GetCachedSize(const int &)”的引用
+          with
+          [
+              Key=google::protobuf::int32
+          ]
     正在创建库 release\ClassifyDll.lib 和对象 release\ClassifyDll.exp
   正在生成代码
-d:\code\c++\software_cup_ocr\software_cup_ocr\classifydll\classifierr.cpp(71): warning C4715: “classifier::Classifier::classify”: 不是所有的控件路径都返回值
-  603 of 605 functions (99.7%) were compiled, the rest were copied from previous compilation.
+d:\代码\software_cup_ocr\classifydll\classifierr.cpp(72): warning C4715: “classifier::Classifier::classify”: 不是所有的控件路径都返回值
+  5 of 602 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     3 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    17 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
-  ClassifyDll.vcxproj -> D:\Code\C++\Software_Cup_OCR\Software_Cup_OCR\ClassifyDll\release\ClassifyDll.dll
+  ClassifyDll.vcxproj -> D:\代码\Software_Cup_OCR\ClassifyDll\release\ClassifyDll.dll
   ClassifyDll.vcxproj -> release\ClassifyDll.pdb (Full PDB)

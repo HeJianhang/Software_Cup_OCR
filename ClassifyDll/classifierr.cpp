@@ -3,7 +3,8 @@
 
 namespace classifier
 {
-	Classifier::Classifier(std::string graphPath, std::string labelPath)
+
+	Classifier::Classifier(const std::string& graphPath, const std::string& labelPath)
 	{
 		if (!readLabel(labelPath))
 		{
@@ -19,8 +20,8 @@ namespace classifier
 			}
 			else
 			{
-				options.config.mutable_gpu_options()->set_per_process_gpu_memory_fraction(0.2);
-				options.config.mutable_gpu_options()->set_allow_growth(true);
+				//options.config.mutable_gpu_options()->set_per_process_gpu_memory_fraction(0.3);
+				//options.config.mutable_gpu_options()->set_allow_growth(true);
 
 				tensorflow::Status status = NewSession(options, &session);
 				if (!status.ok())
@@ -70,7 +71,7 @@ namespace classifier
 		}
 	}
 
-	bool Classifier::readLabel(std::string path)
+	bool Classifier::readLabel(const std::string& path)
 	{
 		std::ifstream infile(path);
 		std::string buffer;
@@ -87,7 +88,7 @@ namespace classifier
 		return true;
 	}
 
-	tensorflow::Status Classifier::LoadGraph(std::string graphPath, tensorflow::GraphDef & graphdef)
+	tensorflow::Status Classifier::LoadGraph(const std::string& graphPath, tensorflow::GraphDef & graphdef)
 	{
 		using namespace tensorflow;
 		SessionOptions options;

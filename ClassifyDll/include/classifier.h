@@ -1,10 +1,9 @@
 #pragma once
 
-#include <string>
+
 #include <fstream>
 #include <utility>
 #include <vector>
-
 
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
@@ -45,13 +44,13 @@ namespace classifier
 		tensorflow::Session* session;
 		tensorflow::GraphDef graphdef;
 	private:
-		bool readLabel(std::string path);
-		tensorflow::Status LoadGraph(std::string graphPath, tensorflow::GraphDef &graphdef);
+		bool readLabel( const std::string& path);
+		tensorflow::Status LoadGraph(const std::string& graphPath, tensorflow::GraphDef &graphdef);
 		tensorflow::Status createGraph(tensorflow::Session *session, tensorflow::GraphDef &graphdef);
 		void createInputsTensor(std::vector<std::pair<std::string, tensorflow::Tensor>>& input, cv::Mat& img, int topK, bool trainFlag, float keepProb);
 		tensorflow::Status predict(tensorflow::Session *session, std::vector<std::pair<std::string, tensorflow::Tensor>>& inputs, std::vector<tensorflow::Tensor>& results);
 	public:
-		Classifier(std::string graphPath, std::string labelPath);
+		Classifier(const std::string& graphPath, const std::string& labelPath);
 		bool classify(cv::Mat &img, std::vector<Word> &words, int topK = 3);
 	};
 }
