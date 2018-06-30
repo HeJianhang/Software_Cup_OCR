@@ -1,0 +1,6 @@
+AIVisitor.exe:可执行文件
+frozen_model.pb:ocr识别模型
+labels.txt:字符标签
+yolov3-obj.cfg:yolo v3 配置文件
+yolov3-obj_7400.weights：yolo v3权重文件
+tensorflow.dll:tensorflow1.4 dll
