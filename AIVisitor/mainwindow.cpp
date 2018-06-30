@@ -54,7 +54,7 @@ MainWindow::MainWindow(QString labelPath, QString modelPath, QString yoloCfgPath
 	QFile fCss(strCssFile);
 	if (!fCss.open(QFile::ReadOnly))
 	{
-		qDebug("css File %s load false", strCssFile);
+		//qDebug("css File %s load false", strCssFile);
 		return;
 	}
 	QString strCssContent(fCss.readAll());
@@ -87,16 +87,16 @@ void MainWindow::on_fileButton_clicked()
 	}
 	QString path = QFileDialog::getExistingDirectory();
 	if (path.length() == 0) {
-		qDebug("No select file!");
+		//qDebug("No select file!");
 	}
 	else {
-		qDebug("You select %s", path);
+		//qDebug("You select %s", path);
 		pathList.clear(); // 清空之前的路径
 	}
 	QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 	QStringList files = getFileNames(path);
 	for (QString str : files) {
-		qDebug() << str;
+		//qDebug() << str;
 		pathList.push_back(string(str.toLocal8Bit()));
 	}
 	QApplication::restoreOverrideCursor();
@@ -161,8 +161,8 @@ void MainWindow::initTableView()
 
 void MainWindow::setTableView(const pair<std::string, std::string>& data, const int index)
 {
-	qDebug()<<QString::fromStdString(data.first);
-	qDebug()<<index;
+	//qDebug()<<QString::fromStdString(data.first);
+	//qDebug()<<index;
 	model->setItem(index, 0, new QStandardItem(QString::fromLocal8Bit(data.first.c_str())));
 	//设置字符颜色
 	model->item(index, 0)->setForeground(QBrush(QColor(255, 0, 0)));
@@ -221,10 +221,10 @@ void MainWindow::on_excelButton_clicked()
 		tr("Open Config"), "", tr("Config Files (*.xlsx)"));
 	if (!fileName.isNull())
 	{
-		qDebug() << fileName;
+		//qDebug() << fileName;
 	}
 	else {
-		qDebug() << "No select file!";
+		return;
 	}
 	wstring str_fileName = fileName.toStdWString();
 

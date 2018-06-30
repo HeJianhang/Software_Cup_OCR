@@ -32,7 +32,7 @@ void OCRRunnable::run()
 void StartRunnable::run()
 {
 	isRunning = true;
-	qDebug() << pathList->size();
+	//qDebug() << pathList->size();
 	if (isToStop)
 		return;
 	OCRRunnable::listCount = 0;
@@ -43,7 +43,7 @@ void StartRunnable::run()
 		{
 			return;
 		}
-		qDebug() << index;
+		//qDebug() << index;
 		if (index >= 0)
 		{
 			threadList[index]->isRunning = true;

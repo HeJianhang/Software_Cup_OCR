@@ -44,8 +44,6 @@ void create_result_excel(const std::wstring& filename_wstr, const QStandardItemM
 	xlnt::worksheet ws = wb.active_sheet();
 	ws.cell("A1").value(title1_utf8.c_str());
 	ws.cell("B1").value(title2_utf8.c_str());
-	
-	
 	// ×·¼Óµ½result.xlsxÖÐ
 	for (int i = 0; i < model->rowCount(); ++i)
 	{
@@ -59,7 +57,7 @@ void create_result_excel(const std::wstring& filename_wstr, const QStandardItemM
 		ws.cell(xlnt::cell_reference(2, i + 2)).number_format(xlnt::number_format::text());
 		ws.cell(xlnt::cell_reference(2, i + 2)).value(wsNum.c_str());
 	}
-
+	
 
 	wb.save(filename_utf8.c_str());
 }
